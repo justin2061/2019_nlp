@@ -1,0 +1,14 @@
+*.zip
+*.bz2
+zhwiki.txt
+zhwiki_cht.txt
+work/GPT2-Chinese
+work/venv
+work/bertviz_repo
+work/__pycache__
+work/home
+work/.ipynb_checkpoints
+
+#large files
+work/pytorch_model.bin
+work/jieba_segment.txt
