@@ -12,3 +12,5 @@ work/.ipynb_checkpoints
 #large files
 work/pytorch_model.bin
 work/jieba_segment.txt
+work/Text_wordcloud/.ipynb_checkpoints/
+work/common/__pycache__/
