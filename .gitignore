@@ -8,6 +8,7 @@ work/bertviz_repo
 work/__pycache__
 work/home
 work/.ipynb_checkpoints
+*.ipynb_checkpoints
 
 #large files
 work/pytorch_model.bin
