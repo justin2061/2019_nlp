@@ -2,7 +2,8 @@ version: "3.3"
 
 services:
   notebook:
-    image: jupyter/tensorflow-notebook
+    #image: jupyter/tensorflow-notebook
+    build: build/.
     container_name: jupyter
     hostname: jupyter
     restart: unless-stopped
