@@ -1,12 +1,14 @@
 ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/scipy-notebook
 FROM $BASE_CONTAINER
+ARG DEBIAN_FRONTEND=noninteractive
 
 #LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
 USER root
 
 RUN apt-get update --yes
+RUN apt-get -y install apt-utils
 RUN apt-get -y install libc-dev
 RUN apt-get -y install build-essential
 RUN pip install -U pip
