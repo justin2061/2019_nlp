@@ -14,3 +14,4 @@ services:
     environment:
       - TZ=Asia/Taipei
       - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
