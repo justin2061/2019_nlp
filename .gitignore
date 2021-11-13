@@ -8,6 +8,7 @@ work/bertviz_repo
 work/__pycache__
 work/home
 work/.ipynb_checkpoints
+work/Gensim/news_crawl_result.txt
 *.ipynb_checkpoints
 
 #large files
