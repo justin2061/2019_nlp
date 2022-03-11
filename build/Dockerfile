@@ -17,9 +17,12 @@ RUN pip install -U pip
 
 USER ${NB_UID}
 
+# Fix DL4006
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # Install Tensorflow
 RUN mamba install --quiet --yes \
-    'tensorflow=2.4.1' && \
+    'tensorflow' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
