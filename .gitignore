@@ -20,3 +20,5 @@ work/common/__pycache__/
 work/segDone.txt
 work/word2vec.model
 work/jieba_data/dict.txt.big
+
+tfenv/*

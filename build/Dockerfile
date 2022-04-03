@@ -14,6 +14,8 @@ RUN apt-get -y install apt-utils
 RUN apt-get -y install libc-dev
 RUN apt-get -y install build-essential
 RUN pip install -U pip
+# https://github.com/jupyter-server/jupyter-resource-usage
+RUN pip install jupyter-resource-usage
 
 USER ${NB_UID}
 
