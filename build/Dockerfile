@@ -17,14 +17,18 @@ RUN pip install -U pip
 # https://github.com/jupyter-server/jupyter-resource-usage
 RUN pip install jupyter-resource-usage
 
+RUN pip install tensorflow==2.9.3
+RUN pip install torch==4.24.0 --extra-index-url https://download.pytorch.org/whl/cpu
+RUN pip install transformers
+
 USER ${NB_UID}
 
 # Fix DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install Tensorflow
-RUN mamba install --quiet --yes \
-    'tensorflow' && \
-    mamba clean --all -f -y && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
+# RUN mamba install --quiet --yes \
+#     'tensorflow' && \
+#     mamba clean --all -f -y && \
+#     fix-permissions "${CONDA_DIR}" && \
+#     fix-permissions "/home/${NB_USER}"
