@@ -18,8 +18,9 @@ RUN pip install -U pip
 RUN pip install jupyter-resource-usage
 
 RUN pip install tensorflow==2.9.3
-RUN pip install torch==4.24.0 --extra-index-url https://download.pytorch.org/whl/cpu
+RUN pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cpu
 RUN pip install transformers
+RUN pip install -q nltk
 
 USER ${NB_UID}
 
@@ -32,3 +33,4 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #     mamba clean --all -f -y && \
 #     fix-permissions "${CONDA_DIR}" && \
 #     fix-permissions "/home/${NB_USER}"
+RUN fix-permissions "/home/${NB_USER}"
