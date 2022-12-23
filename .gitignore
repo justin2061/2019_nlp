@@ -1,5 +1,7 @@
 *.zip
 *.bz2
+*.tgz
+*.gz
 zhwiki.txt
 zhwiki_cht.txt
 work/GPT2-Chinese
@@ -10,6 +12,7 @@ work/home
 work/.ipynb_checkpoints
 work/Gensim/news_crawl_result.txt
 *.ipynb_checkpoints
+*.pyc
 
 #large files
 work/pytorch_model.bin
@@ -20,5 +23,25 @@ work/common/__pycache__/
 work/segDone.txt
 work/word2vec.model
 work/jieba_data/dict.txt.big
+work/wiki/data/dict.txt.big
+work/wiki/data/*.txt
+work/Text_wordcloud/jieba_data/dict.txt.big
+word2vec.model
 
 tfenv/*
+_tfenv/*
+
+work/themoviedb/*.conf
+work/nltk/omw/*
+work/nltk/omw-1.4/*
+
+work/RNN_LSTM/.ipynb_checkpoints/*
+work/RNN_LSTM/training_checkpoints_2/*
+
+work/Embedding/aclImdb/*
+work/Embedding/logs/*
+
+work/BERT_study/*
+
+*/.ipynb_checkpoints/*
+work/Gensim/.ipynb_checkpoints/*
