@@ -16,3 +16,10 @@ services:
       - TZ=Asia/Taipei
       - JUPYTER_ENABLE_LAB=yes
       - GRANT_SUDO=yes
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

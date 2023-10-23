@@ -1,5 +1,5 @@
 ARG OWNER=jupyter
-ARG BASE_CONTAINER=$OWNER/scipy-notebook
+ARG BASE_CONTAINER=$OWNER/tensorflow-notebook
 FROM $BASE_CONTAINER
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -17,22 +17,9 @@ RUN pip install -U pip
 # https://github.com/jupyter-server/jupyter-resource-usage
 RUN pip install jupyter-resource-usage
 
-
 USER ${NB_UID}
 
-# Fix DL4006
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-# Install Tensorflow
-# RUN mamba install --quiet --yes \
-#     'tensorflow' && \
-#     mamba clean --all -f -y && \
-#     fix-permissions "${CONDA_DIR}" && \
-#     fix-permissions "/home/${NB_USER}"
-RUN fix-permissions "${CONDA_DIR}"
-RUN fix-permissions "/home/${NB_USER}"
-
-RUN pip install tensorflow==2.12.0
+#RUN pip install tensorflow==2.12.0
 RUN pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cpu
 RUN pip install transformers
 RUN pip install -q nltk
